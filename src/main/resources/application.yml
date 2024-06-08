@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: seareport
+  profiles:
+    active: desenvolvimento
+  thymeleaf:
+    check-template-location: false
+  servlet:
+    multipart:
+      max-file-size: 1GB
+      max-request-size: 1GB
+  config:
+    import: optional:file:.env[.properties]
+
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    supported-submit-methods: ["get", "put", "post", "delete", "options", "head", "patch", "trace"]
+  api-docs:
+    enabled: true

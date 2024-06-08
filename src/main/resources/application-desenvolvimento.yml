@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://${DB_SERVER:localhost}:${DB_PORT:3306}/${DB_NAME:seareport}?createDatabaseIfNotExist=true
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}
+  #Configuração de Mapeamento Objeto Relacional
+  jpa:
+    show_sql: true
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
